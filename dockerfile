@@ -19,6 +19,7 @@ RUN chmod +x /tmp/ssh_setup.sh \
 WORKDIR /app
 COPY . /app
 RUN composer install
+RUN cp -n .env.example .env && php artisan key:generate
 CMD php artisan serve --host=0.0.0.0 --port=80
 
 # Open port 2222 for SSH access
