@@ -19,6 +19,8 @@ RUN chmod +x /tmp/ssh_setup.sh \
 WORKDIR /app
 COPY . /app
 RUN composer install
+
+# for some reason the script inside composer.json are not getting triggered !
 RUN cp -n .env.example .env && php artisan key:generate
 CMD php artisan serve --host=0.0.0.0 --port=80
 
