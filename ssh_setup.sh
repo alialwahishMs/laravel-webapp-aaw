@@ -6,3 +6,5 @@ ssh-keygen -A
 if [ ! -d "/var/run/sshd" ]; then
     mkdir -p /var/run/sshd
 fi
+
+service ssh start
