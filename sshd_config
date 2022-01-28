@@ -1,3 +1,7 @@
+#
+# /etc/ssh/sshd_config
+#
+
 Port 			2222
 ListenAddress 		0.0.0.0
 LoginGraceTime 		180
